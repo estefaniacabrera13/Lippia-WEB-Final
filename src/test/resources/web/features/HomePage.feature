@@ -3,12 +3,12 @@ Feature: Home Page
 
   Background:
     Given The user is placed in the practice page
-    And Click on Shop Menu
-    And Click on Home menu button
-    And Verifies that the Home page contains only three Arrivals
 
   @CheckOutValidation
   Scenario Outline: Home Arrivals Add to Basket Items Check out Payment Gateway
+    When Click on Shop Menu
+    And Click on Home menu button
+    And Verifies that the Home page contains only three Arrivals
     And Click the image <image> in the Arrivals and navigate to next page
     And Click on the Add To Basket button
     And Click on Item link that contains the price in the Menu
@@ -24,6 +24,9 @@ Feature: Home Page
 
   @PlaceOrderValidation
   Scenario Outline:  Home Arrivals Add to Basket Items Check out Payment Gateway Place order
+    When Click on Shop Menu
+    And Click on Home menu button
+    And Verifies that the Home page contains only three Arrivals
     And Click the image <image> in the Arrivals and navigate to next page
     And Click on the Add To Basket button
     And Click on Item link that contains the price in the Menu

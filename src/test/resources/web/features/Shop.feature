@@ -3,11 +3,12 @@ Feature: Shop
 
   Background:
     Given The user is placed in the practice page
-    And Click on Shop Menu
+
 
   @ViewBasket
   Scenario Outline: Shop Add to Basket - View Basket through Item link
-    When Click on the Add To Basket button in the Book
+    When Click on Shop Menu
+    And  Click on the Add To Basket button in the Book
     And Click on Item link that contains the price in the Menu
     And In the checkout page verifies the total always is higher than subtotal
     And Click on Proceed to Check out button
@@ -21,7 +22,8 @@ Feature: Shop
 
   @ValidateTax
   Scenario Outline: Shop Add to Basket - View Basket tax funcionality
-    When Click on Home menu button
+    When Click on Shop Menu
+    And Click on Home menu button
     Then Verifies that the Home page contains only three Arrivals
     And Click the image <image> in the Arrivals and navigate to next page
     And Click on the Add To Basket button

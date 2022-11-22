@@ -3,10 +3,10 @@ Feature: Log In
 
   Background:
     Given The user is placed in the practice page
-    And Click on My Account Menu
 
   @LoginErrors
   Scenario Outline: Log-in Handles case sensitive
+    When Click on My Account Menu
     And Enter the case changed username <username> in the text box
     And Enter the case changed password <password> in the text box
     And Click on login button
@@ -18,11 +18,12 @@ Feature: Log In
 
 
   Scenario Outline: Log-in Authentication
+    When Click on My Account Menu
     And Enter the username <username> in the text box
     And Enter the password <password> in the text box
     And Click on login button
     And User must successfully login to the web page
-    When Click on Logout button
+    And Click on Logout button
     And Press the back button
     Then User shouldn’t be signed into his account
     Examples:

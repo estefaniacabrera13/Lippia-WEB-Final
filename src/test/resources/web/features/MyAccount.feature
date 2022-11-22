@@ -3,11 +3,11 @@ Feature: My Account
 
   Background:
     Given The user is placed in the practice page
-    And Click on My Account Menu
 
   @AccountDetails
   Scenario Outline: My Account - Account Details
-    When Enter the username <username> in the text box
+    When Click on My Account Menu
+    And Enter the username <username> in the text box
     And Enter the password <password> in the text box
     And Click on login button
     And Click on Account details
@@ -18,7 +18,8 @@ Feature: My Account
 
   @LogOut
   Scenario Outline: My Account - Log out
-    When Enter the username <username> in the text box
+    When Click on My Account Menu
+    And Enter the username <username> in the text box
     And Enter the password <password> in the text box
     And Click on login button
     And Click on Logout button
