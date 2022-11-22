@@ -1,4 +1,4 @@
-#@Smoke @HomePage
+@Smoke @HomePage
 Feature: Home Page
 
   Background:

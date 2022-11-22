@@ -1,4 +1,4 @@
-#@Smoke @MyAccount
+@Smoke @MyAccount
 Feature: My Account
 
   Background:

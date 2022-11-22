@@ -1,4 +1,4 @@
-#@Smoke @Registration
+@Smoke @Registration
 Feature: Registration
 
   @RegistrationErrors
